@@ -24,3 +24,5 @@ Per tal de fer funcionar el servidor, només haurem de fer:
 $ npm start
 ```
 
+Un veada iniciat, ens indicarà l'adreça i el port pel que podem accedir al contingut del servidor. Aquest contingut s'ubicatà en general a la carpeta `public`, i a través de l'API REST que es proporcione per a cada exemple.
+
