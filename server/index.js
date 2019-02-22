@@ -1,10 +1,31 @@
 const express = require('express')
+const os = require('os');
 const path=require('path')
 const app=express()
-//const cors = require('cors');
 
+
+function getIpAddresses(){
+    let ifaces = os.networkInterfaces();
+    let ret=[];
+    
+
+    Object.keys(ifaces).forEach(function (ifname) {
+    
+    ifaces[ifname].forEach(function (iface) {
+        if ('IPv4' !== iface.family ) {
+        return;
+        }
+        ret.push(iface.address);
+        });
+    });
+    return ret;
+
+}
+
+// Llibrería per a les comarques
 const comarques=require("./APIExemples/comarques/comarques.js");
 
+// Habilitem CORS
 // https://enable-cors.org/server_expressjs.html
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -13,12 +34,14 @@ app.use(function(req, res, next) {
   });
 
 
+/* Middleware per al servidor de pàgines estàtiques */
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+/* Middlewares per a peticions REST */
+
 /* Rutes per a l'exemple de les províncies */
 app.get("/api/provincies",  function(req, res){
-    console.log(comarques.getProvincies());
     res.send(comarques.getProvincies());
 })
 
@@ -27,6 +50,14 @@ app.get("/api/comarques/:provincia", function(req, res){
 })
 
 
+let defaultPort=8000;
+let ips=getIpAddresses();
 
-app.listen(8000);
+console.log("Servidor funcionant pel port "+defaultPort);
+console.log("\nPodeu accedir per les següents adreces:");
+for (ip of ips){
+    console.log("\t"+ip+":"+defaultPort);
+}
+
+app.listen(defaultPort);
 
