@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Ajax Hello World</title>
+ 
+<script type="text/javascript">
+  
+function init() {
+
+  let peticioHttp=null;
+    
+  if(window.XMLHttpRequest) {
+    peticioHttp = new XMLHttpRequest();
+  }
+  else if(window.ActiveXObject) {
+    peticioHttp = new
+        ActiveXObject("Microsoft.XMLHTTP");
+  }
+ 
+ 
+  peticioHttp.onreadystatechange = function () {
+  
+    if(peticioHttp.readyState == 4) {
+      if(peticioHttp.status == 200) {
+
+       var content=document.getElementById("content");
+        
+       content.innerHTML=JSON.parse(peticioHttp.responseText).message;
+      }
+    }
+  };
+ 
+
+  peticioHttp.open('GET', 'http://localhost:8000/js/holamundo.json', true);
+  peticioHttp.send();
+   
+}
+ 
+onload = init;
+</script>
+ 
+</head>
+<body>
+  <div id="content"></div>
+</body>
+</html>
