@@ -58,6 +58,7 @@ console.log("\nPodeu accedir per les següents adreces:");
 for (ip of ips){
     console.log("\t"+ip+":"+defaultPort);
 }
+console.log("\n");
 
 app.listen(defaultPort);
 
