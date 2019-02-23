@@ -42,6 +42,6 @@ Podeu accedir per les següents adreces:
 
 El servidor disposa d'una carpeta `public`, on s'ubicaran els diferents documents (ja siguen HTML, JSON, etc.) que seran servits per aquest. A més, el servidor ofereix una API REST per proporcionar informació per als diferents exercicis.
 
-Aquest servidor està pensat perquè pugueu treballa la part client, pel que, en principi, no farà falta modificar o afegir pàgines dins la carpeta `public`. Els exercicis es poden crear en qualsevol carpeta i *atacar* al servidor a través de les adreces que aquest us indique. El mateix servidor ja incorpora l'opció de deshabilitar les comprovacions d'origens creuats ([Cross Origin o CORS[(https://es.wikipedia.org/wiki/Intercambio_de_recursos_de_origen_cruzado)]), pel que permet accedir des d'altres llocs que no siguen el mateix servidor.
+Aquest servidor està pensat perquè pugueu treballa la part client, pel que, en principi, no farà falta modificar o afegir pàgines dins la carpeta `public`. Els exercicis es poden crear en qualsevol carpeta i *atacar* al servidor a través de les adreces que aquest us indique. El mateix servidor ja incorpora l'opció de deshabilitar les comprovacions d'origens creuats ([Cross Origin o CORS](https://es.wikipedia.org/wiki/Intercambio_de_recursos_de_origen_cruzado)), pel que permet accedir des d'altres llocs que no siguen el mateix servidor.
 
 Al la carpeta *Enunciats* podeu trobar els diferents enunciats d'exemples i exercicis que us permetrà fer el servidor.
