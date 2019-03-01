@@ -5,7 +5,7 @@ let comarques = function(){
     this.comarques={
         "València":[{comarca: "El Camp de Túria", capital:"Llíria"},
             {comarca: "El Camp de Morvedre", capital:"Sagunt"},
-            {comarca: "La Canal de Navarrés- Capital : Enguera"},
+            {comarca: "La Canal de Navarrés", capital : Enguera"},
             {comarca: "La Costera", capital:"Xàtiva"},
             {comarca: "La Foia de Bunyol", capital:"Xiva"},
             {comarca: "València", capital:"València"},
