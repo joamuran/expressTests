@@ -5,7 +5,7 @@ En aquests exemples treballarem sobre una API REST que ens proporciona el servid
 El servidor respon a les següents peticions:
 
 * `api/provincies` (l'adreça completa seria: `http://127.0.0.1:8000/api/provincies`), que ens retorna un JSON amb les tres províncies.
-* `api/comarques/:provincia` (una adreça podría ser `http://127.0.0.1:8000/api/comarques/València`), ue ens retorna un JSON amb les comarques de la província indicada i les seues capitals.
+* `api/comarques/:provincia` (una adreça podría ser `http://127.0.0.1:8000/api/comarques/València`), que ens retorna un JSON amb les comarques de la província indicada i les seues capitals.
 
 ## Exercici 1
 
