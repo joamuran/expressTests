@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pizzes>
+  <pizza>
+    <nom>Pizza Barbacoa</nom>
+    <preu>9€</preu>
+    <descripcio>Pizza amb carn i salsa barbacoa</descripcio>
+    <calories>231 kcal</calories>
+  </pizza>
+
+  <pizza>
+    <nom>Quatre formatges</nom>
+    <preu>8.5€</preu>
+    <descripcio>Pizza amb formatge de mozzarel·la, parmesà, gorgonzola i formatge blau</descripcio>
+    <calories>285 kcal</calories>
+  </pizza>
+
+    <pizza>
+    <nom>Carbonara</nom>
+    <preu>9€</preu>
+    <descripcio>Pizza amb xampinyons, ceba, bacon i nata</descripcio>
+    <calories>256 kcal</calories>
+  </pizza>
+
+  <pizza>
+    <nom>de Verdures</nom>
+    <preu>9.5€</preu>
+    <descripcio>Pizza amb verdures</descripcio>
+    <calories>256 kcal</calories>
+  </pizza>
+
+  <pizza>
+    <nom>de iork i formatge</nom>
+    <preu>7.5€</preu>
+    <descripcio>Pizza amb pernil dolç i formatge</descripcio>
+    <calories>256 kcal</calories>
+  </pizza>
+  
+</pizzes>
