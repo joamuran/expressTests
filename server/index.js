@@ -1,6 +1,7 @@
 const express = require('express')
 const os = require('os');
 const path=require('path')
+const body_parser = require('body-parser');
 const app=express()
 
 
@@ -33,6 +34,9 @@ app.use(function(req, res, next) {
     next();
   });
 
+// Incloem el middleware body_parser per tractar peticions POST
+// https://programacion.net/articulo/gestionar_parametros_post_con_node_js_1186
+app.use(body_parser.urlencoded({extended:true}));
 
 /* Middleware per al servidor de pàgines estàtiques */
 app.use(express.static(path.join(__dirname, 'public')));
@@ -47,6 +51,13 @@ app.get("/api/provincies",  function(req, res){
 
 app.get("/api/comarques/:provincia", function(req, res){
     res.send(comarques.getComarques(req.params.provincia));
+})
+
+app.post("/api/provincies",  function(req, res){
+    console.log(req.body);
+    console.log("req.body");
+
+    res.send(comarques.getProvincies());
 })
 
 
