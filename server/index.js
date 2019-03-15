@@ -53,11 +53,11 @@ app.get("/api/comarques/:provincia", function(req, res){
     res.send(comarques.getComarques(req.params.provincia));
 })
 
-app.post("/api/provincies",  function(req, res){
+app.post("/api/ecoserver",  function(req, res){
     console.log(req.body);
     console.log("req.body");
 
-    res.send(comarques.getProvincies());
+    res.send({message:req.body.text});
 })
 
 

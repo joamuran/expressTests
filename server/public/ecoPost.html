@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Servidor d'eco amb peticions AJAX POST</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    
+    <script type="text/javascript">
+      function init() {
+        let boto = document.getElementById("send");
+        boto.addEventListener("click", function() {
+          let text = document.getElementById("ecotext").value;
+          sendPost(text);
+
+        });
+      }
+
+      function sendPost(dades) {
+        // Agafa un valor d'un formulari i retorna el mateix valor
+
+        // 1. Creem l'objecte XMLHTTPRequest
+        let http = new XMLHttpRequest();
+
+        // 2. Obrim la petició a la URL amb el mètode POST
+        http.open("POST", "http://localhost:8000/api/ecoserver", true);
+
+        // 3. Preparem la cadena de paràmetres del tipus: "variable1=valor1&variable2=valor2&..."
+        let cadenaParametres = "text=" + dades;
+
+        // 4. Establim el tipus de contingut a application/x-www-form-urlencoded
+        http.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+
+        // 5. Finalment, fem el send, enviant les dades POST:
+        http.send(cadenaParametres);
+
+        // 6. I preparem el callback a la resposta
+        http.onreadystatechange = function() {
+          if (http.readyState == 4) {
+            if (http.status == 200) {
+                let content = document.getElementById("content");
+                let p=document.createElement("p");
+                p.innerHTML=JSON.parse(http.responseText).message;
+                content.append(p);
+            }
+          }
+        };
+      }
+
+      onload = init;
+    </script>
+  </head>
+  <body>
+    <label for="ecotext">Introdueix un text</label>
+    <input name="ecotext" id="ecotext" type="text" />
+    <button id="send">Polsa per enviar</button>
+    <div id="content"></div>
+  </body>
+</html>

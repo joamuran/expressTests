@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Servidor d'eco amb peticions AJAX POST</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      function init() {
+        let boto = document.getElementById("send");
+        boto.addEventListener("click", function() {
+          let text = document.getElementById("ecotext").value;
+
+          // Forma 1: Petició amb $.ajax
+          /*$.ajax({
+            type: "POST",
+            url: "http://localhost:8000/api/ecoserver",
+            data: "text=" + encodeURIComponent(text),
+            success: function(dades){
+                  let content = document.getElementById("content");
+                  let p = document.createElement("p");
+                  console.log(dades);
+                  p.innerHTML = dades.message;
+                  content.append(p);
+            },
+            dataType: "json"
+          });*/
+
+
+          // Forma 2: Simplificat amb $.post
+          $.post(
+            "http://localhost:8000/api/ecoserver",
+            "text=" + encodeURIComponent(text),
+            function(dades){
+                  let content = document.getElementById("content");
+                  let p = document.createElement("p");
+                  console.log(dades);
+                  p.innerHTML = dades.message;
+                  content.append(p);
+            },
+            "json"
+          );
+
+        });
+      }
+
+
+      onload = init;
+    </script>
+  </head>
+  <body>
+    <label for="ecotext">Introdueix un text</label>
+    <input name="ecotext" id="ecotext" type="text" />
+    <button id="send">Polsa per enviar</button>
+    <div id="content"></div>
+  </body>
+</html>
