@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foto>
+    <src>http://127.0.0.1:8000/mininstagram/img/fotopaco_2.jpeg</src>
+    <desc>Un dia redó</desc>
+    <comentaris>
+        <comentari>
+            <usuari>Raquel</usuari>
+            <text>Un donuts dels Simpson?</text>
+        </comentari>
+
+        <comentari>
+            <usuari>Pep</usuari>
+            <text>Redó acabaràs tu...</text>
+        </comentari>
+        
+   </comentaris>
+</foto>
+
+
+
+

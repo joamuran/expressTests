@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foto>
+    <src>http://127.0.0.1:8000/mininstagram/img/fotopepe_2.jpeg</src>
+    <desc>Caminant pel monte</desc>
+    <comentaris>
+        <comentari>
+            <usuari>Maria</usuari>
+            <text>Això on és?</text>
+        </comentari>
+        
+   </comentaris>
+</foto>
+
+
+
+

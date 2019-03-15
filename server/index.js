@@ -43,11 +43,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 /* Middlewares per a peticions REST */
-
+ 
 /* Rutes per a l'exemple de les províncies */
 app.get("/api/provincies",  function(req, res){
     res.send(comarques.getProvincies());
 })
+
+/* Middlewares per al servidor d'eco GET i POST */
 
 app.get("/api/comarques/:provincia", function(req, res){
     res.send(comarques.getComarques(req.params.provincia));
@@ -59,6 +61,25 @@ app.post("/api/ecoserver",  function(req, res){
 
     res.send({message:req.body.text});
 })
+
+
+/* Middleware pe a Mininstagram */
+
+const mininstagram=require("./APIExemples/mininstagram/mininstagram.js");
+
+app.post("/api/validaInsta",  function(req, res){
+    let user=req.body.user;
+    let password=req.body.password;
+
+    res.send(mininstagram.validaUsuari(user, password));
+    //console.log(user + " "+ password);
+
+})
+
+
+
+
+
 
 
 let defaultPort=8000;

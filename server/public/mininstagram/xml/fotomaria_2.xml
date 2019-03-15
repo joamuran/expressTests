@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foto>
+    <src>http://127.0.0.1:8000/mininstagram/img/fotomaria_2.jpeg</src>
+    <desc>Menjar sa</desc>
+    <comentaris>
+        <comentari>
+            <usuari>Pep</usuari>
+            <text>Bona dieta, si senyor..</text>
+        </comentari>
+        
+   </comentaris>
+</foto>
+
+
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foto>
+    <src>http://127.0.0.1:8000/mininstagram/img/fotomaria_1.jpeg</src>
+    <desc>Aci.. patint</desc>
+    <comentaris>
+        <comentari>
+            <usuari>Pep</usuari>
+            <text>Alaaa!! Què booo!!</text>
+        </comentari>
+
+         <comentari>
+            <usuari>Maria</usuari>
+            <text>És de dieta..</text>
+        </comentari>
+        
+   </comentaris>
+</foto>
+
+
+
+
