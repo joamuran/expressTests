@@ -66,6 +66,16 @@ app.post("/api/ecoserver",  function(req, res){
     res.send({message:req.body.text});
 })
 
+// Retorna la pròpia petició
+app.get("/api/get", function(req, res){
+	let resp={args: req.args,
+	headers: req.headers, 
+	origin: req.origin,
+	url: req.url}
+	res.send(resp);
+});
+
+
 
 /* Middleware pe a Mininstagram */
 
