@@ -55,6 +55,10 @@ app.get("/api/comarques/:provincia", function(req, res){
     res.send(comarques.getComarques(req.params.provincia));
 })
 
+app.get("/api/capitals/:comarca", function(req, res){
+    res.send(comarques.getCapital(req.params.comarca));
+})
+
 app.post("/api/ecoserver",  function(req, res){
     console.log(req.body);
     console.log("req.body");

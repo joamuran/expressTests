@@ -53,4 +53,14 @@ comarques.prototype.getComarques=function(provincia){
     return this.comarques[provincia];
 };
 
+comarques.prototype.getCapital=function(comarcaReq){
+    for (let provincia of this.provincies){
+        for (let comarca of this.comarques[provincia]){
+            console.log(comarcaReq+ " - "+comarca.comarca);
+            if (comarcaReq==comarca.comarca) return comarca.capital;
+        }
+    }
+    return null;
+};
+
 module.exports=new comarques();
