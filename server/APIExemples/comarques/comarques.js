@@ -37,7 +37,7 @@ let comarques = function(){
             {comarca: "El Baix Maestrat", capital:"Vinaròs"},
             {comarca: "La Plana Alta", capital:"Castelló de la Plana"},
             {comarca: "La Plana Baixa", capital:"Borriana"},
-            {comarca: "El Ports", capital:"Morella"},
+            {comarca: "Els Ports", capital:"Morella"},
             {comarca: "L'Alt Palànicia", capital:"Sogorb"},
             {comarca: "L'Alt Millars", capital:"Cirat"}
             

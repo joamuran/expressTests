@@ -49,14 +49,33 @@ app.get("/api/provincies",  function(req, res){
     res.send(comarques.getProvincies());
 })
 
+app.get("/api/provDelay",  function(req, res){
+    // Afig un retard deliberat i aleatori
+    setTimeout(function(){
+        res.send(comarques.getProvincies());
+    }, 1+(Math.random()*500));
+})
+
 /* Middlewares per al servidor d'eco GET i POST */
 
 app.get("/api/comarques/:provincia", function(req, res){
     res.send(comarques.getComarques(req.params.provincia));
 })
 
+app.get("/api/comDelay/:provincia", function(req, res){
+    setTimeout(function(){
+        res.send(comarques.getComarques(req.params.provincia));
+    }, 1+(Math.random()*500));
+})
+
 app.get("/api/capitals/:comarca", function(req, res){
     res.send(comarques.getCapital(req.params.comarca));
+})
+
+app.get("/api/capDelay/:comarca", function(req, res){
+    setTimeout(function(){
+        res.send(comarques.getCapital(req.params.comarca));    
+    }, 1+(Math.random()*500));
 })
 
 app.post("/api/ecoserver",  function(req, res){
@@ -89,10 +108,6 @@ app.post("/api/validaInsta",  function(req, res){
     //console.log(user + " "+ password);
 
 })
-
-
-
-
 
 
 
