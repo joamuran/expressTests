@@ -78,6 +78,42 @@ app.get("/api/capDelay/:comarca", function(req, res){
     }, 1+(Math.random()*500));
 })
 
+/* Obtenció de la població */
+app.get("/api/poblacio/:comarca", function(req, res){
+    res.send(comarques.getPoblacio(req.params.comarca));
+})
+
+app.get("/api/pobDelay/:comarca", function(req, res){
+    setTimeout(function(){
+        res.send(comarques.getPoblacio(req.params.comarca));    
+    }, 1+(Math.random()*500));
+})
+
+
+/* Obtenció de la imatge */
+app.get("/api/img/:comarca", function(req, res){
+    res.send(comarques.getImg(req.params.comarca));
+})
+
+app.get("/api/imgDelay/:comarca", function(req, res){
+    setTimeout(function(){
+        res.send(comarques.getImg(req.params.comarca));    
+    }, 1+(Math.random()*500));
+})
+
+
+/* Obtenció de la descripció */
+app.get("/api/descripcio/:comarca", function(req, res){
+    res.send(comarques.getDesc(req.params.comarca));
+})
+
+app.get("/api/descDelay/:comarca", function(req, res){
+    setTimeout(function(){
+        res.send(comarques.getDesc(req.params.comarca));    
+    }, 1+(Math.random()*500));
+})
+
+
 app.post("/api/ecoserver",  function(req, res){
     console.log(req.body);
     console.log("req.body");
