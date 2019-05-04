@@ -96,7 +96,7 @@ app.get("/api/get", function(req, res){
 
 
 
-/* Middleware pe a Mininstagram */
+/* Middleware per a Mininstagram */
 
 const mininstagram=require("./APIExemples/mininstagram/mininstagram.js");
 
@@ -108,6 +108,20 @@ app.post("/api/validaInsta",  function(req, res){
     //console.log(user + " "+ password);
 
 })
+
+/* Middleware per a MisViajes  */
+
+const viatges=require("./APIExemples/viatges/viatges.js");
+
+app.post("/api/viatges",  function(req, res){
+    let user=req.body.username;
+    let password=req.body.password;
+
+    res.send(viatges.validaUsuari(user, password));
+    //console.log(user + " "+ password);
+
+})
+
 
 
 
