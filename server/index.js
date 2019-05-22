@@ -43,7 +43,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 /* Middlewares per a peticions REST */
- 
+
+
 /* Rutes per a l'exemple de les províncies */
 app.get("/api/provincies",  function(req, res){
     res.send(comarques.getProvincies());
@@ -113,7 +114,13 @@ app.get("/api/descDelay/:comarca", function(req, res){
     }, 1+(Math.random()*500));
 })
 
+// Ruta per buscar una comarca per les lletres inicials
+app.get("/api/buscacomarca/:lletra",  function(req, res){
+    res.send(comarques.buscaComarca(req.params.lletra));
+})
 
+
+// Servidor d'eco
 app.post("/api/ecoserver",  function(req, res){
     console.log(req.body);
     console.log("req.body");

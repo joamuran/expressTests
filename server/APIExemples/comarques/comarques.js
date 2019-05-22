@@ -302,4 +302,12 @@ comarques.prototype.getDesc = function (comarcaReq) {
     return null;
 };
 
+comarques.prototype.buscaComarca=function (text){
+    let v=[];
+    for (let provincia of this.provincies)
+        for (let comarca of this.comarques[provincia])
+            if (text.toLowerCase()==comarca.comarca.substr(0, text.length).toLowerCase()) v.push(comarca);
+    return v;
+}
+
 module.exports = new comarques();
