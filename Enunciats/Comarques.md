@@ -127,7 +127,7 @@ Es recomana realitzar la implementació amb Javascript del comportament de la p�
 * Crear una classe per a tota l'aplicació, implementant els atributs i mètodes necessaris.
 * Utilitzar delegació d'esdeveniments per tal de gestionar aquests de forma dinàmica.
 * Realitzar tres implementacions diferents per tractar l'asincronía:
-    a) Mitjançant crides Ajax i gestionant la sincronía,
-    b) Mitjançant promeses,
-    c) Mitjançant async/await.
+  * Mitjançant crides Ajax i gestionant la sincronía,
+  * Mitjançant promeses,
+  * Mitjançant async/await.
 
