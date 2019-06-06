@@ -60,6 +60,74 @@ Anem a generar ara una altra taula, basant-nos en l'exercici 3, que afisca la co
 
 * Realitza la implementació que resolga el problema anterior fent ús de crides AJAX i promeses.
 
+## Exercici 5
 
+Es demana una pàgina web on es puguen consultar les diferents comarques del País Valencià, amb més detall d'informació.
 
+L'aspecte de la pàgina serà el següent:
+
+![./img/exer5.png](./img/exer5.png)
+
+A la part superior hi haurà un selector on podrem triar les diferents províncies. Quan es canvie de valor, automàticament haurà de carregar a la part de baix a l'esquerra (`#comarques`) les diferents comarques de la província, tot fent ús dels endpoints de l'API `api/provincies` i `api/comarques/:provincia` i `api/img/:provincia`. Com veieu, es veu la imatge representativa de la comarca i el nom d'aquesta.
+
+Per altra banda, quan fem clic sobre alguna de les imatges, del nom de la comarca o del contenidor que conté ambdues, es carregarà tota la informació sobre la comarca (capital, població, descripció i imatge), i es mostrarà al contenidor de la dreta (`#detallComarca`). Cal tindre en compte en aquest cas que les diferents crides per obtenir cadascuna d'aquestes dades han d'haver finalitzat abans de "pintar" aquest contingut.
+
+Les diferents estrucutres de la pàgina són les següents:
+
+**Estructura de la pàgina principal**
+
+```html
+<body>
+
+  <div class="container">
+    <h1>Informació sobre comarques</h1>
+
+    <form name="provincies_selector">
+
+      <div class="form-group">
+        <label for="provincies">Tria la Povíncia</label>
+        <select class="form-control" name="provincies" id="provincies"></select>
+      </div>
+    </form>
+
+      <div id="comarques" class="col-md-6" style="float:left;"></div>
+      <div id="detallComarca" class="col-md-6" style="float:left;"></div>
+  </div>
+  
+  <script src="js/comarques.js"></script>
+</body>
+```
+
+**Estructura dels contenidors d'imatges dins de #comarques**
+
+```html
+<div class="col-md-6 divComarca" id="El Comtat">
+    <div style="background-image: url(&quot;https://upload.wikimedia.org/wikipedia/commons/a/a5/Senda_hacia_el_Montcabrer.JPG&quot;);" class="col-md-10 col-md-offset-1 imgComarca">
+    </div>
+    <div style="float: left;">El Comtat</div>
+</div>
+```
+
+**Estructura del contenidor d'informació general**
+
+```html
+<div id="detallComarca" class="col-md-6" style="float:left;">
+    <h2>El Comtat</h2>
+    <h3>Capital: Cocentaina</h3>
+    <p>Població: 27.157</p>
+    <p style="font-style: italic;">El Comtat és una comarca central del País Valencià, amb capital a Cocentaina. </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Senda_hacia_el_Montcabrer.JPG" style="width: 100%; height: auto;">
+</div>
+```
+
+### Indicacions generals
+
+Es recomana realitzar la implementació amb Javascript del comportament de la pàgina seguint les següents indicacions:
+
+* Crear una classe per a tota l'aplicació, implementant els atributs i mètodes necessaris.
+* Utilitzar delegació d'esdeveniments per tal de gestionar aquests de forma dinàmica.
+* Realitzar tres implementacions diferents per tractar l'asincronía:
+    a) Mitjançant crides Ajax i gestionant la sincronía,
+    b) Mitjançant promeses,
+    c) Mitjançant async/await.
 
