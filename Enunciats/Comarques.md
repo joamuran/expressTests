@@ -72,7 +72,7 @@ A la part superior hi haurà un selector on podrem triar les diferents provínci
 
 Per altra banda, quan fem clic sobre alguna de les imatges, del nom de la comarca o del contenidor que conté ambdues, es carregarà tota la informació sobre la comarca (capital, població, descripció i imatge), i es mostrarà al contenidor de la dreta (`#detallComarca`). Cal tindre en compte en aquest cas que les diferents crides per obtenir cadascuna d'aquestes dades han d'haver finalitzat abans de "pintar" aquest contingut.
 
-Les diferents estrucutres de la pàgina són les següents:
+Les diferents estructures de la pàgina són les següents:
 
 **Estructura de la pàgina principal**
 
