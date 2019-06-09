@@ -8,9 +8,10 @@ La seua utilitat és purament didàctica, per tal de testejar exemples amb AJAX 
 
 Per tal de treballar amb el servidor, necessitarem abans que res disposar dels paquets `nodejs` i `npm`, el gestor de paquets de node.
 
-Una vegada tinguem aquests paquets, hem d'instal·lar les dependències necessàries per al servidor. Per a aixòm ens ubiquem en la carpeta `server`, i executem:
+Una vegada tinguem aquests paquets, hem d'instal·lar les dependències necessàries per al servidor. Per a això, **ens ubiquem en la carpeta `server`, i instal·lem el paquet**:
 
 ```bash
+$ cd server
 $ npm install
 ```
 
