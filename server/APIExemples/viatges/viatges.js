@@ -65,8 +65,8 @@ usuaris.prototype.validaUsuari=function(username, password){
     };
     // Si arribem aci sense trobar l'usuari, tornem null
     return {
-        usuari: null,
-        fotos: null
+        usuario: null,
+        viajes: null
     };
 };
 

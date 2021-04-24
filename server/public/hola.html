@@ -19,6 +19,8 @@ function init() {
  
   peticioHttp.onreadystatechange = function () {
   
+    console.log(peticioHttp.readyState);
+
     if(peticioHttp.readyState == 4) {
       if(peticioHttp.status == 200) {
 
